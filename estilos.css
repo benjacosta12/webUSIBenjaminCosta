@@ -1,0 +1,1856 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #0d0d0d;
+    color: #ffffff;
+    font-family: 'Roboto Condensed', sans-serif; 
+    line-height: 1.5;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+ul {
+    list-style: none;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+h1, h2, h3, .titulo-principal, .titulo-seccion, .titulo-habilidad {
+    font-family: 'Bebas Neue', sans-serif;
+    letter-spacing: 1px; 
+}
+
+.grillaContenedor, .contenedor {
+    width: 90%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+}
+
+.serviciosContenedor, .habilidadesContenedor, .testimoniosContenedor, .piePagina {
+    padding: 60px 0;
+}
+
+.titulo-seccion {
+    text-align: center;
+    color: #fce300;
+    font-size: 32px;
+    margin-bottom: 40px;
+    border-bottom: 1px solid #fce300;
+}
+
+/*BARRA DE NAVEGACION*/
+.encabezado {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 20px;
+    border-bottom: 1px solid #fce300;
+    position: relative;
+    background-color: #0d0d0d;
+}
+
+.caja-logo {
+    width: 120px;
+}
+
+.logo {
+    width: 100%;
+    margin-bottom: 0;
+}
+
+/* Icono menú hamburguesa */
+.encabezado .icono {
+    display: block;
+    font-size: 30px;
+    color: #ffffff;
+    cursor: pointer;
+    text-decoration: none;
+    width: auto;
+    max-width: none;
+    margin: 0;
+    line-height: 1;
+    transition: 0.3s;
+}
+
+/* Animación con hover en el icono */
+.encabezado .icono:hover {
+    color: #fce300;
+    transform: scale(1.15);
+}
+
+/* Menú de navegación desplegable centrado */
+.topnav {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background-color: #0d0d0d;
+    border-bottom: 2px solid #fce300;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    max-height: 0;
+    opacity: 0;
+    overflow: hidden;
+    transition: max-height 0.4s ease, opacity 0.3s ease, padding 0.3s ease;
+    padding: 0;
+    z-index: 100;
+}
+
+/* Despliegue con hover sobre el icono o menú, y con clic (clase responsive) */
+.encabezado .icono:hover ~ .topnav,
+.topnav:hover,
+.topnav.responsive {
+    max-height: 380px;
+    opacity: 1;
+    padding: 15px 0 20px 0;
+}
+
+/* Enlaces del menú */
+.topnav .enlaceNav {
+    display: block;
+    width: 100%;
+    padding: 10px 0;
+    font-family: 'Bebas Neue', sans-serif;
+    letter-spacing: 1px;
+    font-size: 22px;
+    color: #cccccc;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+/* Animación con hover en los enlaces */
+.topnav .enlaceNav:hover {
+    color: #fce300;
+    background-color: #1a1a1a;
+    letter-spacing: 2px;
+}
+
+.topnav .enlaceNav.activo {
+    color: #fce300;
+}
+/*ESTILOS BANNER (SECCIÓN 1) */
+
+.banner {
+    display: flex;
+    flex-direction: column;
+    padding: 25px 15px 30px 15px;
+}
+
+.bannerTexto {
+    text-align: left;
+    margin-bottom: 0;
+    width: 100%;
+}
+
+.subtitulo {
+    font-size: 18px;
+    margin-bottom: 8px;
+    color: #ffffff;
+}
+
+.tituloPrincipal {
+    font-size: 48px;
+    line-height: 1;
+    margin-bottom: 10px;
+}
+
+.textoRojo {
+    color: #e62429;
+    display: block;
+}
+
+.cajaImagen {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 10px;
+}
+
+.imagenBanner {
+    width: 100%;
+    max-width: 450px;
+    height: auto;
+    display: block;
+}
+
+.cajaBoton {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.CTA {
+    display: inline-block;
+    background-color: #fce300;
+    color: #000;
+    padding: 12px 0;
+    width: 100%;
+    text-align: center;
+    font-weight: bold;
+    font-size: 20px;
+    border-radius: 5px;
+    font-family: 'Bebas Neue', sans-serif;
+    letter-spacing: 1px;
+}
+
+/* ESTILOS SECCIÓN SERVICIOS */
+.cajaServicios {
+    border: 1px solid #333;
+    border-radius: 10px;
+    padding: 30px;
+    text-align: center;
+    background-color: rgba(255, 255, 255, 0.02);
+    margin-bottom: 20px; /* Separación hacia abajo en lugar de gap */
+}
+
+.icono {
+    margin: 0 auto 15px auto;
+    max-width: 50px;
+    width: 40px;
+}
+
+/* ESTILOS SECCIÓN HABILIDADES */
+ 
+.habilidadesContenedor .grillaContenedor {
+    flex-direction: row; 
+    justify-content: space-between; 
+}
+
+.cajaHabilidad {
+    text-align: center;
+    width: 30%; 
+    margin-bottom: 20px; 
+}
+
+.titulo-habilidad {
+    color: #ffffff; 
+    margin-bottom: 10px;
+    font-size: 16px; 
+}
+
+.texto-habilidad {
+    display: none; 
+}
+
+
+/*ESTILOS SECCIÓN TESTIMONIOS */
+.cajaTestimonio {
+    border: 1px solid #333;
+    border-radius: 10px;
+    padding: 30px;
+    text-align: center;
+    background-color: rgba(255, 255, 255, 0.02);
+    margin-bottom: 20px; 
+}
+
+.cita {
+    font-style: italic;
+    color: #ffffff; 
+    margin-bottom: 15px;
+    font-size: 18px;
+}
+.comillaRoja {
+    color: #e62429;
+}
+
+.autor {
+    font-size: 14px;
+    color: #ccc;
+}
+
+/* Footer */
+.piePagina {
+    border-top: 1px solid #333;
+    padding: 25px 15px;
+    text-align: center;
+}
+
+.pieContenedor {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.pieEnlaces {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+.pieEnlaces a {
+    display: block;
+    margin-bottom: 4px;
+    color: #ccc;
+    font-size: 12px;
+}
+
+.pieFirma {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+.pieFirma p {
+    font-size: 10px;
+}
+
+.pieRedes {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin-top: 8px;
+}
+
+.pieRedes a {
+    margin: 3px;
+}
+
+.pieRedes img {
+    width: 25px;
+    height: 25px;
+}
+
+.pieBloqueDerecho {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* ===================================================
+   PAGINA SERVICIOS (servicios.html) - Movil (Base)
+   =================================================== */
+.seccionServiciosPagina {
+    padding: 40px 0 60px 0;
+}
+
+.contenedorServicios {
+    width: 90%;
+    margin: 0 auto;
+}
+
+.bajadaServicios {
+    text-align: center;
+    color: #cccccc;
+    font-size: 16px;
+    margin-top: -25px;
+    margin-bottom: 35px;
+    line-height: 1.4;
+}
+
+.grillaServicios {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.tarjetaServicio {
+    border: 1px solid #333333;
+    border-radius: 10px;
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.02);
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 25px;
+    transition: 0.3s;
+}
+
+.tarjetaServicio:hover {
+    border-color: #fce300;
+}
+
+.imagenServicio {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 6px;
+    margin-bottom: 15px;
+}
+
+.infoServicio {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.tituloServicio {
+    font-family: 'Bebas Neue', sans-serif;
+    color: #fce300;
+    font-size: 26px;
+    letter-spacing: 1px;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+.descripcionServicio {
+    font-family: 'Roboto Condensed', sans-serif;
+    color: #cccccc;
+    font-size: 15px;
+    line-height: 1.4;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.botonServicio {
+    display: block;
+    background-color: #fce300;
+    color: #000000;
+    padding: 10px 0;
+    text-align: center;
+    font-weight: bold;
+    font-size: 18px;
+    border-radius: 5px;
+    font-family: 'Bebas Neue', sans-serif;
+    letter-spacing: 1px;
+    text-decoration: none;
+    width: 100%;
+    transition: 0.3s;
+}
+
+.botonServicio:hover {
+    background-color: #ffffff;
+    color: #000000;
+}
+
+*/CARRUSEL DE TEXTO*/
+html,
+body {
+  font-family: 'Droid Serif', serif;
+}
+
+h1 {
+  font-size: 60px;
+  text-align: center;
+}
+
+.content-slider {
+  width: 100%;
+  height: 360px;
+}
+
+.slider {
+  height: 320px;
+  width: 680px;
+  margin: 40px auto 0;
+  overflow: visible;
+  position: relative;
+}
+
+.mask {
+  overflow: hidden;
+  height: 320px;
+}
+
+.slider ul {
+  margin: 0;
+  padding: 0;
+  position: relative;
+}
+
+.slider li {
+  width: 680px;
+  height: 320px;
+  position: absolute;
+  top: -325px;
+  list-style: none;
+}
+
+.slider .quote {
+  font-size: 40px;
+  font-style: italic;
+}
+
+.slider .source {
+  font-size: 20px;
+  text-align: right;
+}
+
+.slider li.anim1 {
+  animation: cycle 15s linear infinite;
+}
+
+.slider li.anim2 {
+  animation: cycle2 15s linear infinite;
+}
+
+.slider li.anim3 {
+  animation: cycle3 15s linear infinite;
+}
+
+.slider li.anim4 {
+  animation: cycle4 15s linear infinite;
+}
+
+.slider li.anim5 {
+  animation: cycle5 15s linear infinite;
+}
+
+.slider:hover li {
+  animation-play-state: paused;
+}
+
+@keyframes cycle {
+  0% {
+    top: 0px;
+  }
+  4% {
+    top: 0px;
+  }
+  16% {
+    top: 0px;
+    opacity: 1;
+    z-index: 0;
+  }
+  20% {
+    top: 325px;
+    opacity: 0;
+    z-index: 0;
+  }
+  21% {
+    top: -325px;
+    opacity: 0;
+    z-index: -1;
+  }
+  50% {
+    top: -325px;
+    opacity: 0;
+    z-index: -1;
+  }
+  92% {
+    top: -325px;
+    opacity: 0;
+    z-index: 0;
+  }
+  96% {
+    top: -325px;
+    opacity: 0;
+  }
+  100% {
+    top: 0px;
+    opacity: 1;
+  }
+}
+
+@keyframes cycle2 {
+  0% {
+    top: -325px;
+    opacity: 0;
+  }
+  16% {
+    top: -325px;
+    opacity: 0;
+  }
+  20% {
+    top: 0px;
+    opacity: 1;
+  }
+  24% {
+    top: 0px;
+    opacity: 1;
+  }
+  36% {
+    top: 0px;
+    opacity: 1;
+    z-index: 0;
+  }
+  40% {
+    top: 325px;
+    opacity: 0;
+    z-index: 0;
+  }
+  41% {
+    top: -325px;
+    opacity: 0;
+    z-index: -1;
+  }
+  100% {
+    top: -325px;
+    opacity: 0;
+    z-index: -1;
+  }
+}
+
+@keyframes cycle3 {
+  0% {
+    top: -325px;
+    opacity: 0;
+  }
+  36% {
+    top: -325px;
+    opacity: 0;
+  }
+  40% {
+    top: 0px;
+    opacity: 1;
+  }
+  44% {
+    top: 0px;
+    opacity: 1;
+  }
+  56% {
+    top: 0px;
+    opacity: 1;
+    z-index: 0;
+  }
+  60% {
+    top: 325px;
+    opacity: 0;
+    z-index: 0;
+  }
+  61% {
+    top: -325px;
+    opacity: 0;
+    z-index: -1;
+  }
+  100% {
+    top: -325px;
+    opacity: 0;
+    z-index: -1;
+  }
+}
+
+@keyframes cycle4 {
+  0% {
+    top: -325px;
+    opacity: 0;
+  }
+  56% {
+    top: -325px;
+    opacity: 0;
+  }
+  60% {
+    top: 0px;
+    opacity: 1;
+  }
+  64% {
+    top: 0px;
+    opacity: 1;
+  }
+  76% {
+    top: 0px;
+    opacity: 1;
+    z-index: 0;
+  }
+  80% {
+    top: 325px;
+    opacity: 0;
+    z-index: 0;
+  }
+  81% {
+    top: -325px;
+    opacity: 0;
+    z-index: -1;
+  }
+  100% {
+    top: -325px;
+    opacity: 0;
+    z-index: -1;
+  }
+}
+
+@keyframes cycle5 {
+  0% {
+    top: -325px;
+    opacity: 0;
+  }
+  76% {
+    top: -325px;
+    opacity: 0;
+  }
+  80% {
+    top: 0px;
+    opacity: 1;
+  }
+  84% {
+    top: 0px;
+    opacity: 1;
+  }
+  96% {
+    top: 0px;
+    opacity: 1;
+    z-index: 0;
+  }
+  100% {
+    top: 325px;
+    opacity: 0;
+    z-index: 0;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+/* ===================================================
+   PAGINA SOBRE SAUL (sobreSaul.html) - Movil (Base)
+   =================================================== */
+.seccionSobreSaul {
+    padding: 40px 0 60px 0;
+}
+
+.contenedorSobreSaul {
+    width: 90%;
+    margin: 0 auto;
+    max-width: 1050px;
+}
+
+.tarjetaSobreSaul {
+    border: 1px solid #333333;
+    border-radius: 10px;
+    padding: 25px 20px;
+    background-color: rgba(255, 255, 255, 0.02);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: 0.3s;
+}
+
+.tarjetaSobreSaul:hover {
+    border-color: #fce300;
+}
+
+.cajaImagenSaul {
+    width: 100%;
+    max-width: 360px;
+    margin-bottom: 25px;
+    display: flex;
+    justify-content: center;
+}
+
+.imagen-saul {
+    width: 100%;
+    height: auto;
+    max-height: 400px;
+    object-fit: cover;
+    border-radius: 8px;
+    border: 1px solid #333333;
+    display: block;
+}
+
+.textoSobreSaul {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.parrafoSobreSaul {
+    font-family: 'Roboto Condensed', sans-serif;
+    color: #cccccc;
+    font-size: 16px;
+    line-height: 1.6;
+    margin-bottom: 18px;
+    text-align: left;
+}
+
+.parrafoSobreSaul:last-child {
+    margin-bottom: 0;
+}
+
+/* ===================================================
+   PAGINA CASOS (casos.html) - Movil (Base)
+   =================================================== */
+.seccionCasosPagina {
+    padding: 40px 0 60px 0;
+}
+
+.contenedorCasos {
+    width: 90%;
+    margin: 0 auto;
+    max-width: 1050px;
+}
+
+.bajadaCasos {
+    text-align: center;
+    color: #cccccc;
+    font-size: 16px;
+    margin-top: -25px;
+    margin-bottom: 35px;
+    line-height: 1.4;
+}
+
+.listaCasos {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.tarjetaCaso {
+    border: 1px solid #333333;
+    border-radius: 10px;
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.02);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 25px;
+    transition: 0.3s;
+}
+
+.tarjetaCaso:hover {
+    border-color: #fce300;
+}
+
+.cajaImagenCaso {
+    width: 100%;
+    max-width: 320px;
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #141414;
+    border: 1px solid #262626;
+    border-radius: 8px;
+    padding: 10px;
+}
+
+.imagenCaso {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 6px;
+}
+
+.infoCaso {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.tituloExpediente {
+    font-family: 'Bebas Neue', sans-serif;
+    color: #fce300;
+    font-size: 24px;
+    letter-spacing: 1px;
+    margin-bottom: 12px;
+    text-align: center;
+}
+
+.fichaCaso {
+    background-color: rgba(255, 255, 255, 0.03);
+    border-left: 3px solid #fce300;
+    border-radius: 4px;
+    padding: 10px 14px;
+    margin-bottom: 15px;
+}
+
+.datoFila {
+    font-family: 'Roboto Condensed', sans-serif;
+    font-size: 15px;
+    color: #ffffff;
+    margin-bottom: 6px;
+    line-height: 1.3;
+}
+
+.datoFila:last-child {
+    margin-bottom: 0;
+}
+
+.etiquetaDato {
+    color: #fce300;
+    font-weight: 700;
+}
+
+.descripcionCaso {
+    font-family: 'Roboto Condensed', sans-serif;
+    color: #cccccc;
+    font-size: 15px;
+    line-height: 1.55;
+    text-align: left;
+}
+
+/* ===================================================
+   PAGINA PREGUNTAS FRECUENTES (preguntasFrecuentes.html) - Movil (Base)
+   =================================================== */
+.seccionFaq {
+    padding: 40px 0 60px 0;
+}
+
+.contenedorFaq {
+    width: 90%;
+    margin: 0 auto;
+    max-width: 950px;
+}
+
+.listaFaq {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.bloqueFaq {
+    border: 1px solid #333333;
+    border-radius: 8px;
+    background-color: rgba(255, 255, 255, 0.02);
+    margin-bottom: 24px;
+    overflow: hidden;
+    transition: border-color 0.3s ease, background-color 0.3s ease;
+}
+
+.bloqueFaq:hover {
+    border-color: #fce300;
+}
+
+.preguntaFaq {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 18px 20px;
+    cursor: pointer;
+    user-select: none;
+    background-color: transparent;
+    transition: background-color 0.3s ease;
+}
+
+.preguntaFaq:hover {
+    background-color: rgba(252, 227, 0, 0.04);
+}
+
+.textoPregunta {
+    font-family: 'Bebas Neue', sans-serif;
+    color: #fce300;
+    font-size: 21px;
+    letter-spacing: 1px;
+    line-height: 1.3;
+    margin: 0;
+    flex: 1;
+    text-align: left;
+}
+
+.iconoFaq {
+    font-family: 'Roboto Condensed', sans-serif;
+    font-size: 26px;
+    font-weight: 700;
+    color: #fce300;
+    margin-left: 15px;
+    min-width: 25px;
+    text-align: center;
+    line-height: 1;
+    flex-shrink: 0;
+    transition: transform 0.2s ease, color 0.2s ease;
+}
+
+.preguntaFaq:hover .iconoFaq {
+    transform: scale(1.15);
+}
+
+.respuestaFaq {
+    display: none;
+    padding: 18px 20px 22px 20px;
+    border-top: 1px solid #262626;
+    background-color: rgba(0, 0, 0, 0.25);
+}
+
+.textoRespuesta {
+    font-family: 'Roboto Condensed', sans-serif;
+    color: #ffffff;
+    font-size: 16px;
+    line-height: 1.6;
+    text-align: left;
+    margin: 0;
+}
+
+/* ===================================================
+   VERSION TABLET (Intermedia entre movil y computadora)
+   =================================================== */
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+
+    /* CONTENEDOR GENERAL */
+    .grillaContenedor, .contenedor {
+        width: 90%;
+    }
+
+    .serviciosContenedor, 
+    .habilidadesContenedor, 
+    .testimoniosContenedor {
+        padding: 50px 0;
+    }
+
+    .titulo-seccion {
+        font-size: 30px;
+        margin-bottom: 35px;
+    }
+
+    /* 1. ENCABEZADO Y MENU */
+    .encabezado {
+        padding: 12px 5%;
+    }
+
+    .caja-logo {
+        width: 75px;
+    }
+
+    .encabezado .icono {
+        display: none;
+    }
+
+    .topnav {
+        position: static;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: flex-end;
+        width: auto;
+        max-height: none;
+        opacity: 1;
+        overflow: visible;
+        background-color: transparent;
+        border-bottom: none;
+        padding: 0;
+    }
+
+    .topnav .enlaceNav {
+        display: block;
+        width: auto;
+        margin-left: 14px;
+        padding: 0;
+        font-size: 15px;
+        letter-spacing: 1px;
+        background-color: transparent;
+    }
+
+    .topnav .enlaceNav:hover {
+        color: #fce300;
+        letter-spacing: 1px;
+        background-color: transparent;
+    }
+
+    /* 2. BANNER */
+    .banner {
+        flex-direction: row;
+        flex-wrap: wrap;
+        align-items: center;
+        padding: 40px 5%;
+    }
+
+    .bannerTexto {
+        width: 55%;
+        margin-bottom: 0;
+    }
+
+    .subtitulo {
+        font-size: 20px;
+        margin-bottom: 8px;
+    }
+
+    .tituloPrincipal {
+        font-size: 56px;
+        line-height: 1.05;
+        margin-bottom: 12px;
+    }
+
+    .cajaImagen {
+        width: 45%;
+        margin-bottom: 0;
+    }
+
+    .imagenBanner {
+        max-width: 380px;
+        width: 100%;
+    }
+
+    .cajaBoton {
+        width: 55%;
+        justify-content: flex-start;
+        margin-top: 10px;
+    }
+
+    .CTA {
+        width: 200px;
+        padding: 12px 0;
+        font-size: 18px;
+    }
+
+    /* 3. SERVICIOS (Distribución 2x2 como en el diseño) */
+    .serviciosContenedor {
+        padding: 50px 5%;
+    }
+
+    .serviciosContenedor .grillaContenedor {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        width: 100%;
+    }
+
+    .cajaServicios {
+        width: 48%;
+        padding: 25px 20px;
+        margin-bottom: 24px;
+    }
+
+    /* 4. HABILIDADES (3 columnas y descripción visible) */
+    .habilidadesContenedor {
+        padding: 50px 5%;
+    }
+
+    .habilidadesContenedor .grillaContenedor {
+        flex-direction: row;
+        justify-content: space-between;
+        width: 100%;
+    }
+
+    .cajaHabilidad {
+        width: 30%;
+        margin-bottom: 0;
+    }
+
+    .titulo-habilidad {
+        font-size: 20px;
+    }
+
+    .texto-habilidad {
+        display: block;
+        font-size: 14px;
+        color: #ccc;
+    }
+
+    /* 5. TESTIMONIOS (3 tarjetas en fila con espaciado equilibrado) */
+    .testimoniosContenedor {
+        padding: 50px 5%;
+    }
+
+    .testimoniosContenedor .grillaContenedor {
+        flex-direction: row;
+        justify-content: space-between;
+        width: 100%;
+    }
+
+    .cajaTestimonio {
+        width: 31%;
+        padding: 22px 14px;
+        margin-bottom: 0;
+    }
+
+    .cita {
+        font-size: 15px;
+        margin-bottom: 12px;
+    }
+
+    .autor {
+        font-size: 13px;
+    }
+
+    /* 6. PIE DE PAGINA (3 bloques en fila horizontal) */
+    .piePagina {
+        padding: 25px 5%;
+    }
+
+    .pieContenedor {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        flex-wrap: nowrap;
+    }
+
+    .pieEnlaces {
+        width: 20%;
+        align-items: flex-start;
+        text-align: left;
+        margin-bottom: 0;
+    }
+
+    .pieEnlaces a {
+        font-size: 13px;
+        margin-bottom: 4px;
+    }
+
+    .pieFirma {
+        width: 50%;
+        margin-bottom: 0;
+    }
+
+    .pieFirma p {
+        font-size: 11px;
+    }
+
+    .pieRedes {
+        margin-top: 6px;
+    }
+
+    .pieRedes img {
+        width: 24px;
+        height: 24px;
+    }
+
+    .pieBloqueDerecho {
+        width: 20%;
+        align-items: flex-end;
+    }
+
+    .pieBloqueDerecho .pieEnlaces {
+        width: 100%;
+        align-items: flex-end;
+        text-align: right;
+    }
+
+    /* 7. PAGINA SERVICIOS (Bloques horizontales apilados para Tablet) */
+    .seccionServiciosPagina {
+        padding: 50px 0;
+    }
+
+    .grillaServicios {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .tarjetaServicio {
+        flex-direction: row;
+        align-items: center;
+        width: 100%;
+        padding: 25px;
+        margin-bottom: 25px;
+    }
+
+    .imagenServicio {
+        width: 220px;
+        height: 160px;
+        margin-bottom: 0;
+        flex-shrink: 0;
+    }
+
+    .infoServicio {
+        padding-left: 25px;
+        align-items: flex-start;
+        text-align: left;
+    }
+
+    .tituloServicio {
+        text-align: left;
+        font-size: 26px;
+        margin-bottom: 8px;
+    }
+
+    .descripcionServicio {
+        text-align: left;
+        font-size: 15px;
+        margin-bottom: 16px;
+    }
+
+    .botonServicio {
+        width: 180px;
+    }
+
+    /* PAGINA SOBRE SAUL - Tablet */
+    .seccionSobreSaul {
+        padding: 50px 0;
+    }
+
+    .tarjetaSobreSaul {
+        flex-direction: row;
+        align-items: center;
+        padding: 30px;
+    }
+
+    .cajaImagenSaul {
+        width: 40%;
+        max-width: 320px;
+        margin-bottom: 0;
+        flex-shrink: 0;
+    }
+
+    .imagen-saul {
+        width: 100%;
+        height: auto;
+        max-height: 380px;
+    }
+
+    .textoSobreSaul {
+        width: 60%;
+        padding-left: 25px;
+    }
+
+    .parrafoSobreSaul {
+        font-size: 15px;
+        line-height: 1.55;
+        margin-bottom: 16px;
+    }
+
+    /* PAGINA CASOS - Tablet */
+    .seccionCasosPagina {
+        padding: 50px 0;
+    }
+
+    .tarjetaCaso {
+        flex-direction: row;
+        align-items: center;
+        padding: 25px;
+        margin-bottom: 25px;
+    }
+
+    .cajaImagenCaso {
+        width: 240px;
+        max-width: 240px;
+        margin-bottom: 0;
+        margin-right: 25px;
+        flex-shrink: 0;
+    }
+
+    .infoCaso {
+        width: calc(100% - 265px);
+        text-align: left;
+    }
+
+    .tituloExpediente {
+        text-align: left;
+        font-size: 26px;
+        margin-bottom: 10px;
+    }
+
+    .descripcionCaso {
+        font-size: 15px;
+        line-height: 1.5;
+    }
+
+    /* PAGINA PREGUNTAS FRECUENTES - Tablet */
+    .seccionFaq {
+        padding: 50px 0;
+    }
+
+    .contenedorFaq {
+        width: 90%;
+        max-width: 900px;
+    }
+
+    .bloqueFaq {
+        margin-bottom: 28px;
+    }
+
+    .preguntaFaq {
+        padding: 22px 25px;
+    }
+
+    .textoPregunta {
+        font-size: 23px;
+    }
+
+    .iconoFaq {
+        font-size: 28px;
+    }
+
+    .respuestaFaq {
+        padding: 20px 25px 25px 25px;
+    }
+
+    .textoRespuesta {
+        font-size: 17px;
+    }
+}
+
+/* VERSION COMPUTADORA */
+@media screen and (min-width: 1024px) {
+
+.encabezado {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 5%;
+}
+
+.caja-logo {
+    width: 80px;
+}
+
+.logo {
+    width: 100%;
+    height: auto;
+}
+
+.encabezado .icono {
+    display: none;
+}
+
+.topnav {
+    position: static;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-end;
+    width: auto;
+    max-height: none;
+    opacity: 1;
+    overflow: visible;
+    background-color: transparent;
+    border-bottom: none;
+    padding: 0;
+}
+
+.topnav .enlaceNav {
+    display: block;
+    width: auto;
+    margin-left: 20px;
+    padding: 0;
+    font-size: 16px;
+    letter-spacing: 1px;
+    background-color: transparent;
+}
+
+.topnav .enlaceNav:hover {
+    color: #fce300;
+    letter-spacing: 1px;
+    background-color: transparent;
+}
+/* BANNER */
+    .banner {
+        flex-direction: row;
+        flex-wrap: wrap;
+        align-items: center;
+        padding: 50px 8%;
+    }
+
+    .bannerTexto {
+        width: 50%;
+    }
+
+    .tituloPrincipal {
+        font-size: 70px;
+    }
+
+    .subtitulo {
+        font-size: 24px;
+    }
+
+    .cajaImagen {
+        width: 50%;
+    }
+
+    .imagenBanner {
+        max-width: 600px;
+        width: 100%;
+    }
+
+    .cajaBoton {
+        width: 50%;
+        justify-content: flex-start;
+    }
+
+    .CTA {
+        width: 220px;
+    }
+
+
+    /* SERVICIOS */
+    .serviciosContenedor {
+        padding: 60px 5%;
+    }
+
+    .serviciosContenedor .grillaContenedor {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        width: 100%;
+    }
+
+    .cajaServicios {
+        width: 23%;
+        margin-bottom: 20px;
+    }
+
+
+    /* HABILIDADES */
+    .habilidadesContenedor {
+        padding: 60px 5%;
+    }
+
+    .habilidadesContenedor .grillaContenedor {
+        flex-direction: row;
+        justify-content: space-between;
+        width: 100%;
+    }
+
+    .cajaHabilidad {
+        width: 30%;
+    }
+
+    .titulo-habilidad {
+        font-size: 24px;
+    }
+
+    .texto-habilidad {
+        display: block;
+    }
+
+
+    /* TESTIMONIOS */
+    .testimoniosContenedor {
+        padding: 60px 5%;
+    }
+
+    .testimoniosContenedor .grillaContenedor {
+        flex-direction: row;
+        justify-content: space-between;
+        width: 100%;
+    }
+
+    .cajaTestimonio {
+        width: 30%;
+    }
+
+    /* FOOTER */
+    .piePagina {
+        padding: 25px 5%;
+    }
+
+    .pieContenedor {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        flex-wrap: nowrap;
+    }
+
+    .pieEnlaces {
+        width: 20%;
+        align-items: flex-start;
+        text-align: left;
+        margin-bottom: 0;
+    }
+
+    .pieFirma {
+        width: 50%;
+        margin-bottom: 0;
+    }
+
+    .pieBloqueDerecho {
+        width: 20%;
+        align-items: flex-end;
+    }
+
+    .pieBloqueDerecho .pieEnlaces {
+        width: 100%;
+        align-items: flex-end;
+        text-align: right;
+    }
+
+    .pieRedes {
+        margin-top: 4px;
+    }
+
+    /* PAGINA SERVICIOS (Bloques horizontales apilados para Computadora) */
+    .seccionServiciosPagina {
+        padding: 60px 0;
+    }
+
+    .contenedorServicios {
+        width: 90%;
+        max-width: 1050px;
+    }
+
+    .grillaServicios {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .tarjetaServicio {
+        flex-direction: row;
+        align-items: center;
+        width: 100%;
+        padding: 30px;
+        margin-bottom: 30px;
+    }
+
+    .imagenServicio {
+        width: 270px;
+        height: 180px;
+        margin-bottom: 0;
+        flex-shrink: 0;
+    }
+
+    .infoServicio {
+        padding-left: 35px;
+        align-items: flex-start;
+        text-align: left;
+    }
+
+    .tituloServicio {
+        text-align: left;
+        font-size: 30px;
+        margin-bottom: 10px;
+    }
+
+    .descripcionServicio {
+        text-align: left;
+        font-size: 16px;
+        margin-bottom: 20px;
+        line-height: 1.5;
+    }
+
+    .botonServicio {
+        width: 200px;
+        padding: 12px 0;
+        font-size: 19px;
+    }
+
+    /* PAGINA SOBRE SAUL - Computadora */
+    .seccionSobreSaul {
+        padding: 60px 0;
+    }
+
+    .contenedorSobreSaul {
+        width: 90%;
+        max-width: 1050px;
+    }
+
+    .tarjetaSobreSaul {
+        flex-direction: row;
+        align-items: center;
+        padding: 40px;
+    }
+
+    .cajaImagenSaul {
+        width: 38%;
+        max-width: 380px;
+        margin-bottom: 0;
+        flex-shrink: 0;
+    }
+
+    .imagen-saul {
+        width: 100%;
+        height: auto;
+        max-height: 440px;
+        border-radius: 8px;
+    }
+
+    .textoSobreSaul {
+        width: 62%;
+        padding-left: 40px;
+    }
+
+    .parrafoSobreSaul {
+        font-size: 17px;
+        line-height: 1.65;
+        margin-bottom: 20px;
+    }
+
+    /* PAGINA CASOS - Computadora */
+    .seccionCasosPagina {
+        padding: 60px 0;
+    }
+
+    .contenedorCasos {
+        width: 90%;
+        max-width: 1050px;
+    }
+
+    .tarjetaCaso {
+        flex-direction: row;
+        align-items: center;
+        padding: 30px;
+        margin-bottom: 30px;
+    }
+
+    .cajaImagenCaso {
+        width: 280px;
+        max-width: 280px;
+        margin-bottom: 0;
+        margin-right: 35px;
+        flex-shrink: 0;
+    }
+
+    .infoCaso {
+        width: calc(100% - 315px);
+        text-align: left;
+    }
+
+    .tituloExpediente {
+        text-align: left;
+        font-size: 28px;
+        margin-bottom: 12px;
+    }
+
+    .datoFila {
+        font-size: 16px;
+    }
+
+    .descripcionCaso {
+        font-size: 16px;
+        line-height: 1.65;
+    }
+
+    /* PAGINA PREGUNTAS FRECUENTES - Computadora */
+    .seccionFaq {
+        padding: 60px 0;
+    }
+
+    .contenedorFaq {
+        width: 85%;
+        max-width: 950px;
+    }
+
+    .bloqueFaq {
+        margin-bottom: 32px;
+    }
+
+    .preguntaFaq {
+        padding: 24px 30px;
+    }
+
+    .textoPregunta {
+        font-size: 25px;
+    }
+
+    .iconoFaq {
+        font-size: 30px;
+    }
+
+    .respuestaFaq {
+        padding: 22px 30px 26px 30px;
+    }
+
+    .textoRespuesta {
+        font-size: 18px;
+        line-height: 1.65;
+    }
+}
+
+/* ===================================================
+   FORMULARIO DE CONTACTO
+   =================================================== */
+
+/* Estilos base (Móvil) */
+.seccionContacto {
+    padding: 50px 0 70px 0;
+    display: flex;
+    justify-content: center;
+}
+
+.contenedorContacto {
+    width: 90%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+}
+
+.bajadaContacto {
+    color: #ffffff;
+    font-family: 'Roboto Condensed', sans-serif;
+    font-size: 18px;
+    margin-top: 0;
+    margin-bottom: 30px;
+}
+
+.formularioContacto {
+    width: 100%;
+    background-color: #141414;
+    border: 1px solid #333333;
+    padding: 30px 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+.campoFormulario {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+}
+
+.campoFormulario label {
+    color: #fce300;
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 20px;
+    margin-bottom: 8px;
+}
+
+.campoFormulario input,
+.campoFormulario textarea {
+    width: 100%;
+    padding: 12px;
+    background-color: #0d0d0d;
+    color: #ffffff;
+    border: 1px solid #333333;
+    font-family: 'Roboto Condensed', sans-serif;
+    font-size: 16px;
+}
+
+.campoFormulario textarea {
+    height: 140px;
+}
+
+.campoFormulario input:focus,
+.campoFormulario textarea:focus {
+    border: 1px solid #fce300;
+}
+
+.cajaBotonContacto {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    margin-top: 10px;
+}
+
+.botonEnviar {
+    background-color: #fce300;
+    color: #000000;
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 22px;
+    font-weight: bold;
+    padding: 12px 0;
+    border: none;
+    width: 100%;
+}
+
+.botonEnviar:hover {
+    background-color: #ffffff;
+    color: #000000;
+}
+
+/* Adaptación para Tablet */
+@media screen and (min-width: 768px) {
+    .contenedorContacto {
+        width: 70%;
+    }
+
+    .formularioContacto {
+        padding: 35px 30px;
+    }
+
+    .botonEnviar {
+        width: 200px;
+    }
+}
+
+/* Adaptación para Computadora */
+@media screen and (min-width: 1024px) {
+    .seccionContacto {
+        padding: 60px 0 80px 0;
+    }
+
+    .contenedorContacto {
+        width: 550px;
+    }
+
+    .formularioContacto {
+        padding: 40px;
+    }
+
+    .botonEnviar {
+        width: 220px;
+    }
+}
+
